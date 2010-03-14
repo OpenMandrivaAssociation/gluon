@@ -24,7 +24,7 @@ but powerful API to handle 2D objects, sounds and inputs.
 %defattr(-,root,root)
 %_kde_bindir/gluoncreator
 %_kde_applicationsdir/gluon-creator.desktop
-%_kde_appsdir/gluoncreator/gluoncreatorui.rc
+%_kde_appsdir/gluoncreator
 %_kde_datadir/config.kcfg/gluoncreatorsettings.kcfg
 %_kde_iconsdir/hicolor/*/apps/gluon_creator.png
 %_kde_services/*.desktop
