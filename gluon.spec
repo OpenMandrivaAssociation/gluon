@@ -154,7 +154,7 @@ Headers files needed to build %name.
 
 #-----------------------------------------------------------------------------
 %prep
-%setup -q%{?git:n %name}
+%setup -q -n %name
 
 %build
 %cmake_kde4
