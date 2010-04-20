@@ -3,11 +3,11 @@
 Name:		gluon
 Summary:	Gluon is a cross-platform free and open source 2D game engine from KDE
 Group:		Graphical desktop/KDE
-Version:	0.69.0
+Version:	0.70.0
 Release:    %mkrel 0.%git.1
 License:	GPL
 URL:		http://gluon.tuxfamily.org/
-Source0:	http://gitorious.net/gluon/%name-%version.%git.tar.bz2
+Source0:	http://gitorious.net/gluon/%name-%version.tar.gz
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	kdelibs4-devel
 BuildRequires:	glew-devel 
@@ -23,6 +23,7 @@ but powerful API to handle 2D objects, sounds and inputs.
 %files
 %defattr(-,root,root)
 %_kde_bindir/gluoncreator
+%_kde_bindir/gluonplayer
 %_kde_applicationsdir/gluon-creator.desktop
 %_kde_appsdir/gluoncreator
 %_kde_datadir/config.kcfg/gluoncreatorsettings.kcfg
@@ -154,7 +155,7 @@ Headers files needed to build %name.
 
 #-----------------------------------------------------------------------------
 %prep
-%setup -q -n %name
+%setup -q -n %name-%name
 
 %build
 %cmake_kde4
