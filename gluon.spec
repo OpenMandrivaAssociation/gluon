@@ -131,11 +131,11 @@ Group:      System/Libraries
 
 #-----------------------------------------------------------------------------
 
-%package -n %libname-devel
-Summary:	Headers files for %name
-Group:		Development/KDE and Qt
-Provides:	lib%name-devel = %version-%release
-Provides:	%name-devel = %version-%release
+%package    devel
+Summary:    Headers files for %name
+Group:	    Development/KDE and Qt
+Provides:   lib%name-devel = %version-%release
+Provides:   %name-devel = %version-%release
 Requires:   %libgluonaudio = %version-%release
 Requires:   %libgluoncore = %version-%release
 Requires:   %libgluoncreator = %version-%release
@@ -143,10 +143,10 @@ Requires:   %libgluonengine = %version-%release
 Requires:   %libgluoninput = %version-%release
 Requires:   %libgluongraphics = %version-%release
 
-%description -n %libname-devel
+%description devel
 Headers files needed to build %name.
 
-%files -n %libname-devel
+%files devel
 %defattr(-,root,root,-)
 %_kde_datadir/gluon/cmake
 %_kde_datadir/cmake/Modules/*.cmake
