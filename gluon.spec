@@ -4,7 +4,7 @@ Name:		gluon
 Summary:	Gluon is a cross-platform free and open source 2D game engine from KDE
 Group:		Graphical desktop/KDE
 Version:	0.70.0
-Release:    %mkrel 1
+Release:    %mkrel 2
 License:	GPL
 URL:		http://gluon.tuxfamily.org/
 Source0:	http://gitorious.net/gluon/%name-%version.tar.gz
