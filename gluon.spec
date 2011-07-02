@@ -25,23 +25,23 @@ but powerful API to handle 2D objects, sounds and inputs.
 
 %files
 %defattr(-,root,root)
-%_kde_bindir/%{name}*
+%_kde_bindir/gluon*
 %_kde_datadir/applications/gluon_kdeextplayer.desktop
 %_kde_datadir/applications/gluon_kdeplayer.desktop
 %_kde_datadir/applications/gluon_qmlplayer.desktop
 %_kde_datadir/applications/gluon_qtplayer.desktop
 %_kde_applicationsdir/gluon-creator.desktop
-%_kde_appsdir/gluon_kdeextplayer
-%_kde_appsdir/gluoncreator
-%_kde_appsdir/gluoneditorpart
-%_kde_appsdir/gluonviewerpart
+%_kde_appsdir/gluon_kdeextplayer/
+%_kde_appsdir/gluoncreator/
+%_kde_appsdir/gluoneditorpart/
+%_kde_appsdir/gluonviewerpart/
 %_kde_datadir/config.kcfg/gluoncreatorsettings.kcfg
-%_kde_datadir/%{name}
+%_kde_datadir/gluon/
 %_kde_datadir/mime/packages/x-gluon-mimetypes.xml
 %_kde_services/*.desktop
 %_kde_servicetypes/gluoncreator_plugin.desktop
-%_kde_iconsdir/hicolor
-%_kde_libdir/gluon
+%_kde_iconsdir/hicolor/*
+%_kde_libdir/gluon/
 %_kde_libdir/kde4/*.so
 
 #-----------------------------------------------------------------------------
@@ -160,8 +160,8 @@ Headers files needed to build %name.
 
 %files devel
 %defattr(-,root,root,-)
-%_kde_datadir/cmake/Modules
-%_kde_includedir/%name
+%_kde_datadir/cmake/Modules/*
+%_kde_includedir/gluon/
 %_kde_libdir/libGluon*.so
 
 #-----------------------------------------------------------------------------
