@@ -1,16 +1,15 @@
 #define git  5493f448
 %define major 0
 
-
 Name:		gluon
 Summary:	Gluon is a cross-platform free and open source 2D game engine from KDE
 Group:		Graphical desktop/KDE
 Version:	0.71.0
-Release:	%mkrel 1
+Release:	2
 License:	GPL
 URL:		http://gluon.tuxfamily.org/
 Source0:	http://gitorious.net/gluon/%name-%version.tar.bz2
-BuildRoot:	%_tmppath/%name-%version-%release-buildroot
+
 BuildRequires:	kdelibs4-devel
 BuildRequires:	glew-devel 
 BuildRequires:	libsndfile-devel
@@ -24,7 +23,6 @@ It aims to make life easier for game developers by providing a simple
 but powerful API to handle 2D objects, sounds and inputs.
 
 %files
-%defattr(-,root,root)
 %_kde_bindir/gluon*
 %_kde_datadir/applications/gluon_kdeextplayer.desktop
 %_kde_datadir/applications/gluon_kdeplayer.desktop
@@ -55,7 +53,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluonaudio
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonAudio.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -69,7 +66,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluoncore
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonCore.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -83,7 +79,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluoncreator
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonCreator.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -97,7 +92,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluonengine
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonEngine.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -111,7 +105,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluoninput
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonInput.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -125,7 +118,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluongraphics
-%defattr(-,root,root,-)
 %_kde_libdir/libGluonGraphics.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -139,7 +131,6 @@ Group:      System/Libraries
 %name library.
 
 %files -n %libgluonplayer
-%defattr(-,root,root)
 %_kde_libdir/libGluonPlayer.so.%{major}*
 
 #-----------------------------------------------------------------------------
@@ -159,7 +150,6 @@ Provides:   %name-devel = %version-%release
 Headers files needed to build %name.
 
 %files devel
-%defattr(-,root,root,-)
 %_kde_datadir/cmake/Modules/*
 %_kde_includedir/gluon/
 %_kde_libdir/libGluon*.so
@@ -173,13 +163,5 @@ Headers files needed to build %name.
 %make
 
 %install
-rm -fr %buildroot
 %makeinstall_std -C build
-
-
-%clean
-rm -fr %buildroot
-
-
-
 
