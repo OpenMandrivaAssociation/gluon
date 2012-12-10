@@ -1,0 +1,20 @@
+--- input/linux/inputthread.cpp.orig	2012-08-02 14:56:39.000000000 +0800
++++ input/linux/inputthread.cpp	2012-08-02 14:56:52.000000000 +0800
+@@ -33,6 +33,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <unistd.h>
+ #include <linux/input.h>
+ 
+ #define BITS_PER_LONG (sizeof(long) * 8)
+--- input/linux/detectlinux.cpp.gcc	2012-08-02 15:02:33.000000000 +0800
++++ input/linux/detectlinux.cpp	2012-08-02 15:02:42.000000000 +0800
+@@ -27,6 +27,7 @@
+ #include <QtCore/QDir>
+ #include <QtCore/QCoreApplication>
+ #include <QtCore/QDebug>
++#include <unistd.h>
+ 
+ // #include <libudev.h>
+ 
