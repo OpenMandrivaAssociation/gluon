@@ -11,6 +11,7 @@ URL:		https://gluon.tuxfamily.org/
 Source0:	http://gitorious.net/gluon/%{name}-%{version}.tar.bz2
 Patch0:		gluon-0.71.0-gcc-4.7.patch
 
+BuildRequires:	make
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(alure)
 BuildRequires:	pkgconfig(glew)
